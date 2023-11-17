@@ -78,6 +78,18 @@ section p{
 
 }
 
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust the alpha (last value) for darkness */
+    opacity: 0; /* Initially invisible */
+    transition: opacity 0.3s; /* Smooth transition for opacity change */
+}
+
+
 .flex-item img {
     width: 100%;
     height: 100%; 
@@ -98,12 +110,24 @@ section p{
     background-color: #262220; /* Add a semi-transparent background color */
 }
 
+.flex-item:hover .overlay {
+    opacity: 1; /* Make the overlay visible on hover */
+}
+
+
+
 footer {
     background-color: #333;
-    color: white;
     padding: 10px;
     text-align: center;
 }
+
+li b {
+    color: #ffffff; 
+    font-size: 25px;
+    text-decoration: none;
+}
+
 
 /* Media Queries for Responsive Design */
 @media only screen and (max-width: 767px) {
@@ -122,7 +146,5 @@ footer {
     }
     .flex-item {
         flex: 0 0 calc(50% - 20px); /* Set width for two columns with margin on smaller screens */
-
-
 }
-
+}
