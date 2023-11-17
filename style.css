@@ -1,0 +1,128 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #F7F1F0;
+}
+
+header {
+    background-color: #F7F1F0;
+    color: #262220;
+    font-family:"DejaVu Sans Mac Name" ;
+    padding: 10px;
+    text-align: center;
+    font-size: 25px;
+}
+
+nav {
+    background-color: #F7F1F0;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #262220;
+}
+
+ul.list{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex; 
+    justify-content: space-around;
+    color: #262220;
+}
+
+li a {
+    color: #262220; 
+    font-size: 25px;
+    text-decoration: none;
+}
+
+li a:hover {
+    color: #cf665b; 
+}
+
+section.main-image {
+    background: url('background for main page.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: flex-start; 
+    font-size: 45px;
+    font-family: 'Times New Roman', Times, serif ;
+    font-weight: bold;
+    color: #262220; 
+    border-bottom: 1px solid #262220;
+}
+
+section p{
+    margin-bottom: 5px;
+}
+
+.flex-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    
+}
+
+.flex-item {
+    position: relative;
+    flex: 25%; 
+    padding: 10px;
+
+}
+
+.flex-item img {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+}
+
+.text-overlay {
+    position: absolute; /* Position the text absolutely within the relatively positioned item */
+    top: 50%; /* Adjust the vertical position */
+    left: 50%; /* Adjust the horizontal position */
+    transform: translate(-50%, -50%); /* Center the text within the item */
+    color: #e4b7b7; /* Text color */
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px; /* Adjust font size */
+    font-weight: bold; /* Adjust font weight */
+    padding: 10px; /* Adjust the padding as needed */
+    background-color: #262220; /* Add a semi-transparent background color */
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Media Queries for Responsive Design */
+@media only screen and (max-width: 767px) {
+    /* Adjust styles for smaller screens here */
+    section.main-image {
+        padding: 30px;
+    }
+    .text-overlay {
+        font-size: 20px;
+    }
+    li a {
+        font-size: 15px;
+    }
+    .flex-container{
+        flex-wrap: wrap;
+    }
+    .flex-item {
+        flex: 0 0 calc(50% - 20px); /* Set width for two columns with margin on smaller screens */
+
+
+}
+
