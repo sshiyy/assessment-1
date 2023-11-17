@@ -87,6 +87,15 @@ section p{
     margin-bottom: 5px;
 }
 
+section.color{
+    background-color: #F7F1F0;
+    color: #262220;
+    text-align: center;
+    font-size: 25px;
+    border-bottom: 1px solid #262220;
+    padding-bottom: 20px;
+}
+
 .flex-container {
     position: relative;
     display: flex;
@@ -100,6 +109,10 @@ section p{
     flex: 25%; 
     padding: 10px;
 
+}
+
+.flex-item p {
+    margin-bottom: 10px;
 }
 
 .overlay {
