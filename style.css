@@ -111,10 +111,6 @@ section.color{
 
 }
 
-.flex-item p {
-    margin-bottom: 10px;
-}
-
 .overlay {
     position: absolute;
     top: 0;
