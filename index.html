@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main Page</title>
+    <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
     <header>
-        <h1>name</h1>
+        <h1>Blossom</h1>
     </header>
 
     <nav>
@@ -21,10 +22,11 @@
             <li><a href="login.html">Log In</a></li>
             <li><a href="signup.html">Sign Up</a></li>
             <li><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-                <form class="example" action="action_page.php">
-                  <input type="text" placeholder="Search.." name="search">
-                  <button type="submit"><i class="fa fa-search"></i></button>
-                </form></li>
+                <form id="searchForm" class="example">
+                    <input type="text" id="searchInput" placeholder="Search.." name="search">
+                    <button type="button" onclick="searchProducts()"><i class="fa fa-search"></i></button>
+                </form>
+            </li>
         </ul>
     </nav>
 
@@ -98,7 +100,7 @@
             </div>
         </div>
     </section>
-
+    <script src="script.js"></script>
 </body>
 
 <footer>
