@@ -7,6 +7,8 @@
     <title>Main Page</title>
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js" defer></script>
+
     <style>
         .modal {
             display: none;
@@ -26,6 +28,7 @@
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             text-align: center;
+            z-index: 2
         }
 
         .close {
@@ -68,7 +71,7 @@
 
         #signupForm button:hover,
         #loginForm button:hover {
-            background-color: #45a049;
+            background-color: #e4b7b7;
         }
     </style>
 </head>
@@ -96,7 +99,6 @@
 
     <section class="product-category">
         <div class="flex-container">
-            <!-- Your existing content goes here -->
             <div class="flex-item">
                 <a href="fragrances.html">
                     <img src="fragrances.jpg">
@@ -130,7 +132,6 @@
 
     <section class="product-category">
         <div class="flex-container">
-            <!-- Your existing content goes here -->
             <div class="flex-item">
                 <a href="cosmeticbag.html">
                     <img src="bag.jpg">
@@ -162,42 +163,43 @@
         </div>
     </section>
 
-    <!-- Login Modal -->
-    <div id="loginModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('loginModal')">&times;</span>
-            <h2>Login</h2>
-            <form id="loginForm">
-                <label for="loginUsername">Username:</label>
-                <input type="text" id="loginUsername" name="loginUsername" required>
+<!-- Login Modal -->
+<div id="loginModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('loginModal')">&times;</span>
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="loginUsername">Username:</label>
+            <input type="text" id="loginUsername" name="loginUsername" required>
 
-                <label for="loginPassword">Password:</label>
-                <input type="password" id="loginPassword" name="loginPassword" required>
+            <label for="loginPassword">Password:</label>
+            <input type="password" id="loginPassword" name="loginPassword" required>
 
-                <button type="button" onclick="login()">Log In</button>
-            </form>
-        </div>
+            <button type="button" onclick="login()">Log In</button>
+        </form>
     </div>
+</div>
 
-    <!-- Signup Modal -->
-    <div id="signupModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('signupModal')">&times;</span>
-            <h2>Sign Up</h2>
-            <form id="signupForm">
-                <label for="signupUsername">Username:</label>
-                <input type="text" id="signupUsername" name="signupUsername" required>
+<!-- Signup Modal -->
+<div id="signupModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('signupModal')">&times;</span>
+        <h2>Sign Up</h2>
+        <form id="signupForm">
+            <label for="signupUsername">Username:</label>
+            <input type="text" id="signupUsername" name="signupUsername" required>
 
-                <label for="signupEmail">Email:</label>
-                <input type="email" id="signupEmail" name="signupEmail" required>
+            <label for="signupEmail">Email:</label>
+            <input type="email" id="signupEmail" name="signupEmail" required>
 
-                <label for="signupPassword">Password:</label>
-                <input type="password" id="signupPassword" name="signupPassword" required>
+            <label for="signupPassword">Password:</label>
+            <input type="password" id="signupPassword" name="signupPassword" required>
 
-                <button type="button" onclick="signup()">Sign Up</button>
-            </form>
-        </div>
+            <button type="button" onclick="signup()">Sign Up</button>
+        </form>
     </div>
+</div>
+
 
     <footer>
         <h2>
@@ -209,33 +211,5 @@
         </h2>
     </footer>
 
-    <script>
-        let activeModal = null;
-    
-        function openModal(modalId) {
-            if (activeModal) {
-                document.getElementById(activeModal).style.display = 'none';
-            }
-            document.getElementById(modalId).style.display = 'flex';
-            activeModal = modalId;
-        }
-    
-        function closeModal(modalId) {
-            document.getElementById(modalId).style.display = 'none';
-            activeModal = null;
-        }
-    
-        function login() {
-            // Implement your login logic here
-            // For simplicity, let's just close the modal for now
-            closeModal('loginModal');
-        }
-    
-        function signup() {
-            // Implement your signup logic here
-            // For simplicity, let's just close the modal for now
-            closeModal('signupModal');
-        }
-    </script>
 </body>
 </html>
