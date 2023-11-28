@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -6,6 +7,70 @@
     <title>Main Page</title>
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+
+        #signupForm,
+        #loginForm {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #signupForm label,
+        #loginForm label {
+            margin-top: 10px;
+            color: rgba(0, 0, 0, 0.5);
+        }
+
+        #signupForm input,
+        #loginForm input {
+            padding: 8px;
+            margin-bottom: 15px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        #signupForm button,
+        #loginForm button {
+            background-color: #e4b7b7;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        #signupForm button:hover,
+        #loginForm button:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 
 <body>
@@ -19,14 +84,8 @@
             <li><a href="bestseller.html">Bestsellers</a></li>
             <li><a href="new.html">Whats new</a></li>
             <li><a href="sale.html">Sale</a></li>
-            <li><a href="login.html">Log In</a></li>
-            <li><a href="signup.html">Sign Up</a></li>
-            <li><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-                <form id="searchForm" class="example">
-                    <input type="text" id="searchInput" placeholder="Search.." name="search">
-                    <button type="button" onclick="searchProducts()"><i class="fa fa-search"></i></button>
-                </form>
-            </li>
+            <li><a href="#" onclick="openModal('loginModal')">Log In</a></li>
+            <li><a href="#" onclick="openModal('signupModal')">Sign Up</a></li>
         </ul>
     </nav>
 
@@ -37,6 +96,7 @@
 
     <section class="product-category">
         <div class="flex-container">
+            <!-- Your existing content goes here -->
             <div class="flex-item">
                 <a href="fragrances.html">
                     <img src="fragrances.jpg">
@@ -62,7 +122,7 @@
                 <a href="makeuptools.html">
                     <img src="tools.jpg">
                     <div class="overlay"></div>
-                    <div class="text-overlay">Makeup Tools</div>    
+                    <div class="text-overlay">Makeup Tools</div>
                 </a>
             </div>
         </div>
@@ -70,18 +130,19 @@
 
     <section class="product-category">
         <div class="flex-container">
+            <!-- Your existing content goes here -->
             <div class="flex-item">
                 <a href="cosmeticbag.html">
                     <img src="bag.jpg">
                     <div class="overlay"></div>
-                    <div class="text-overlay">Cosmetic Bag</div>    
+                    <div class="text-overlay">Cosmetic Bag</div>
                 </a>
             </div>
             <div class="flex-item">
                 <a href="skincare.html">
                     <img src="skincare.jpg">
                     <div class="overlay"></div>
-                    <div class="text-overlay">Skincare</div>    
+                    <div class="text-overlay">Skincare</div>
                 </a>
             </div>
             <div class="flex-item">
@@ -100,15 +161,81 @@
             </div>
         </div>
     </section>
-    <script src="script.js"></script>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('loginModal')">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <label for="loginUsername">Username:</label>
+                <input type="text" id="loginUsername" name="loginUsername" required>
+
+                <label for="loginPassword">Password:</label>
+                <input type="password" id="loginPassword" name="loginPassword" required>
+
+                <button type="button" onclick="login()">Log In</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('signupModal')">&times;</span>
+            <h2>Sign Up</h2>
+            <form id="signupForm">
+                <label for="signupUsername">Username:</label>
+                <input type="text" id="signupUsername" name="signupUsername" required>
+
+                <label for="signupEmail">Email:</label>
+                <input type="email" id="signupEmail" name="signupEmail" required>
+
+                <label for="signupPassword">Password:</label>
+                <input type="password" id="signupPassword" name="signupPassword" required>
+
+                <button type="button" onclick="signup()">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <h2>
+            <ul class="list">
+                <li><b href="#">About Us</b></li>
+                <li><b href="#">Instagram</b></li>
+                <li><b href="#">Tiktok</b></li>
+            </ul>
+        </h2>
+    </footer>
+
+    <script>
+        let activeModal = null;
+    
+        function openModal(modalId) {
+            if (activeModal) {
+                document.getElementById(activeModal).style.display = 'none';
+            }
+            document.getElementById(modalId).style.display = 'flex';
+            activeModal = modalId;
+        }
+    
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+            activeModal = null;
+        }
+    
+        function login() {
+            // Implement your login logic here
+            // For simplicity, let's just close the modal for now
+            closeModal('loginModal');
+        }
+    
+        function signup() {
+            // Implement your signup logic here
+            // For simplicity, let's just close the modal for now
+            closeModal('signupModal');
+        }
+    </script>
 </body>
-
-<footer>
-    <h2>
-        <ul class="list">
-            <li><b href="#">About Us</b></li>
-            <li><b href="#">Instagram</b></li>
-            <li><b href="#">Tiktok</b></li>
-    </h2>
-</footer>
-
+</html>

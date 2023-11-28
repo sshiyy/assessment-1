@@ -15,12 +15,25 @@ header {
     font-size: 25px;
 }
 
-nav {
-    background-color: #F7F1F0;
-    color: white;
-    padding: 10px;
+
+nav{
+    overflow: hidden;
+    background-color: #e4b7b7;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+nav a{
+
+    display: block;
+    color: #ffffff;
     text-align: center;
-    border-bottom: 1px solid #262220;
+    padding: 14px 16px;
+    text-decoration: none;
 }
 
 ul.list{
@@ -52,19 +65,6 @@ header a:hover {
     color: #cf665b; 
 }
 
-form.example input[type=text] {
-    padding: 15px; /* Adjusted padding */
-    font-size: 18px; /* Adjusted font size */
-    border-radius: 20px; /* Rounded corners */
-    margin-bottom: 20px;;
-}
-
-form.example button {
-    padding: 15px; /* Adjusted padding */
-    font-size: 18px; /* Adjusted font size */
-    border-radius: 20px; /* Rounded corners */
-    margin-left: 10px; /* Spacing between input and button */
-}
 
 section.main-image {
     background: url('background for main page.jpg');
@@ -108,7 +108,6 @@ section.color{
     position: relative;
     flex: 25%; 
     padding: 10px;
-
 }
 
 .overlay {
@@ -127,6 +126,8 @@ section.color{
     height: 100%; 
     object-fit: cover;
     aspect-ratio: 1 / 1;
+    border-radius: 10px;
+
 }
 
 .text-overlay {
@@ -158,6 +159,7 @@ li b {
     text-decoration: none;
 }
 
+
 /* Media Queries for Responsive Design */
 @media only screen and (max-width: 767px) {
     /* Adjust styles for smaller screens here */
@@ -177,3 +179,5 @@ li b {
         flex: 0 0 calc(50% - 20px); /* Set width for two columns with margin on smaller screens */
     }
 }
+
+

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; /* Ensure the body takes up the full height of the viewport */
+        }
+
+        #loginFormContainer {
+            max-width: 400px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #loginForm {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #loginForm h2 {
+            text-align: center;
+            color: #262220;
+        }
+
+        #loginForm label {
+            margin-top: 10px;
+            color: #262220;
+        }
+
+        #loginForm input {
+            padding: 8px;
+            margin-bottom: 15px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        #loginForm button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        #loginForm button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div id="loginFormContainer">
+        <form id="loginForm">
+            <h2>Login</h2>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('loginForm');
+
+            form.addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                const username = form.username.value;
+                const password = form.password.value;
+
+                // Retrieve user information from local storage
+                const storedUsername = localStorage.getItem('username');
+                const storedPassword = localStorage.getItem('password');
+
+                // Check if the entered credentials match the stored information
+                if (username === storedUsername && password === storedPassword) {
+                    alert('Login successful!');
+                } else {
+                    alert('Invalid username or password. Please try again.');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
