@@ -1,12 +1,16 @@
-// for log in and sign up pop up
+// for log in, sign up, and contact modals
 let activeModal = null;
 
-function openModal(modalId) {
+function openModal(modalId, event) {
     if (activeModal) {
-        document.getElementById(activeModal).style.display = 'none';
+        // If there's an active modal, prevent opening another one
+        return;
     }
+
     document.getElementById(modalId).style.display = 'flex';
     activeModal = modalId;
+    
+    event.preventDefault(); // Prevent the default behavior (scrolling to the top)
 }
 
 function closeModal(modalId) {
@@ -15,13 +19,22 @@ function closeModal(modalId) {
 }
 
 function login() {
-    // Implement your login logic here
-    // For simplicity, let's just close the modal for now
     closeModal('loginModal');
 }
 
 function signup() {
-    // Implement your signup logic here
-    // For simplicity, let's just close the modal for now
     closeModal('signupModal');
+}
+
+// Add similar functions for other modals
+function openContactModal(event) {
+    openModal('contactModal', event);
+}
+
+function openFaqsModal(event) {
+    openModal('faqsModal', event);
+}
+
+function openReturnsModal(event) {
+    openModal('returnsModal', event);
 }

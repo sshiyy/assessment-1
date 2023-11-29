@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All</title>
+    <title>All - Blossom</title>
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="script.js" defer></script>
@@ -34,26 +34,18 @@
     <section class="product-category">
         <div class="flex-container">
             <div class="flex-item">
-                <a href="fragrances.html">
-                    <img src="fragrances.jpg">
-                </a>
+                <img src="fragrances.jpg">
                 <p>desc</p>
             </div>
             <div class="flex-item">
-                <a href="hairaccessories.html">
-                    <img src="hair tie.jpg">
-                </a>
+                <img src="hair tie.jpg">
                 <p>desc</p>
             </div>
             <div class="flex-item">
-                <a href="makeup.html">
-                    <img src="makeup.jpg">
-                </a>
+                <img src="makeup.jpg">
             </div>
             <div class="flex-item">
-                <a href="makeuptools.html">
-                    <img src="tools.jpg">
-                </a>
+                <img src="tools.jpg">
             </div>
         </div>
     </section>
@@ -62,26 +54,18 @@
     <section class="product-category">
         <div class="flex-container">
             <div class="flex-item">
-                <a href="fragrances.html">
-                    <img src="fragrances.jpg">
-                </a>
+                <img src="fragrances.jpg">
                 <p>desc</p>
             </div>
             <div class="flex-item">
-                <a href="hairaccessories.html">
-                    <img src="hair tie.jpg">
-                </a>
+                <img src="hair tie.jpg">
                 <p>desc</p>
             </div>
             <div class="flex-item">
-                <a href="makeup.html">
-                    <img src="makeup.jpg">
-                </a>
+                <img src="makeup.jpg">
             </div>
             <div class="flex-item">
-                <a href="makeuptools.html">
-                    <img src="tools.jpg">
-                </a>
+                <img src="tools.jpg">
             </div>
         </div>
     </section>
@@ -91,66 +75,60 @@
     <section class="product-category">
         <div class="flex-container">
             <div class="flex-item">
-                <a href="fragrances.html">
-                    <img src="fragrances.jpg">
-                </a>
+                <img src="fragrances.jpg">
+                <p>desc</p>
+                <p2>desc</p2>
+            </div>
+            <div class="flex-item">
+                <img src="hair tie.jpg">
                 <p>desc</p>
             </div>
             <div class="flex-item">
-                <a href="hairaccessories.html">
-                    <img src="hair tie.jpg">
-                </a>
-                <p>desc</p>
+                <img src="makeup.jpg">
             </div>
             <div class="flex-item">
-                <a href="makeup.html">
-                    <img src="makeup.jpg">
-                </a>
-            </div>
-            <div class="flex-item">
-                <a href="makeuptools.html">
-                    <img src="tools.jpg">
-                </a>
+                <img src="tools.jpg">
             </div>
         </div>
     </section>
 
     <!-- Login Modal -->
-<div id="loginModal" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="closeModal('loginModal')">&times;</span>
-        <h2>Login</h2>
-        <form id="loginForm">
-            <label for="loginUsername">Username:</label>
-            <input type="text" id="loginUsername" name="loginUsername" required>
-
-            <label for="loginPassword">Password:</label>
-            <input type="password" id="loginPassword" name="loginPassword" required>
-
-            <button type="button" onclick="login()">Log In</button>
-        </form>
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('loginModal')">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <label for="loginUsername">Username:</label>
+                <input type="text" id="loginUsername" name="loginUsername" required>
+    
+                <label for="loginPassword">Password:</label>
+                <input type="password" id="loginPassword" name="loginPassword" required>
+    
+                <button type="button" onclick="login()">Log In</button>
+            </form>
+        </div>
     </div>
-</div>
-
-<!-- Signup Modal -->
-<div id="signupModal" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="closeModal('signupModal')">&times;</span>
-        <h2>Sign Up</h2>
-        <form id="signupForm">
-            <label for="signupUsername">Username:</label>
-            <input type="text" id="signupUsername" name="signupUsername" required>
-
-            <label for="signupEmail">Email:</label>
-            <input type="email" id="signupEmail" name="signupEmail" required>
-
-            <label for="signupPassword">Password:</label>
-            <input type="password" id="signupPassword" name="signupPassword" required>
-
-            <button type="button" onclick="signup()">Sign Up</button>
-        </form>
+    
+    <!-- Signup Modal -->
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('signupModal')">&times;</span>
+            <h2>Sign Up</h2>
+            <form id="signupForm">
+                <label for="signupUsername">Username:</label>
+                <input type="text" id="signupUsername" name="signupUsername" required>
+    
+                <label for="signupEmail">Email:</label>
+                <input type="email" id="signupEmail" name="signupEmail" required>
+    
+                <label for="signupPassword">Password:</label>
+                <input type="password" id="signupPassword" name="signupPassword" required>
+    
+                <button type="button" onclick="signup()">Sign Up</button>
+            </form>
+        </div>
     </div>
-</div>
+
 </body>
 </html>
 
