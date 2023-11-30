@@ -23,7 +23,7 @@ nav{
     top: 0;
     z-index: 100;
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     align-items: center; 
 }
 
@@ -33,6 +33,10 @@ nav a{
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+}
+
+section.color{
+    font-weight: bold;
 }
 
 .modal {
@@ -371,6 +375,19 @@ section.testimonial{
     .flex-item {
         flex: 0 0 calc(50% - 20px); /* Set width for two columns with margin on smaller screens */
     }
+    .modal {
+        max-width: 80%; /* Adjust the max-width for smaller screens */
+    }
+    .footer-section h2 {
+        font-size: 19px;
+        margin-bottom: 10px;
+    }
+    
+    .footer-section p {
+        font-size: 11px;
+        margin-bottom: 20px;
+    }
+    
 }
 
 
