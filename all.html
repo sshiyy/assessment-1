@@ -22,8 +22,8 @@
             <li><a href="bestseller.html">Bestsellers</a></li>
             <li><a href="new.html">Whats new</a></li>
             <li><a href="sale.html">Sale</a></li>
-            <li><a href="#" onclick="openModal('loginModal')">Log In</a></li>
-            <li><a href="#" onclick="openModal('signupModal')">Sign Up</a></li>
+            <li><a href="#" onclick="openModal('loginModal', event)">Log In</a></li>
+            <li><a href="#" onclick="openModal('signupModal', event)">Sign Up</a></li>
         </ul>
     </nav>
 
@@ -100,15 +100,15 @@
             <form id="loginForm">
                 <label for="loginUsername">Username:</label>
                 <input type="text" id="loginUsername" name="loginUsername" required>
-    
+
                 <label for="loginPassword">Password:</label>
                 <input type="password" id="loginPassword" name="loginPassword" required>
-    
+
                 <button type="button" onclick="login()">Log In</button>
             </form>
         </div>
     </div>
-    
+
     <!-- Signup Modal -->
     <div id="signupModal" class="modal">
         <div class="modal-content">
@@ -117,19 +117,81 @@
             <form id="signupForm">
                 <label for="signupUsername">Username:</label>
                 <input type="text" id="signupUsername" name="signupUsername" required>
-    
+
                 <label for="signupEmail">Email:</label>
                 <input type="email" id="signupEmail" name="signupEmail" required>
-    
+
                 <label for="signupPassword">Password:</label>
                 <input type="password" id="signupPassword" name="signupPassword" required>
-    
+
                 <button type="button" onclick="signup()">Sign Up</button>
             </form>
         </div>
     </div>
 
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h2>About Us</h2>
+                <ul class="footer-list">
+                    <li><a href="about.html" class="footer-link">About Blossom</a></li>
+                    <li><a href="testimonial.html" class="footer-link">Testimonial</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h2>Connect with Us</h2>
+                <ul class="footer-list">
+                    <li><a href="https://www.instagram.com/ss.shiyingg/" class="footer-link" target="_blank">Instagram</a></li>
+                    <li><a href="https://www.tiktok.com/@yinggss" class="footer-link" target="_blank">Tiktok</a></li>
+                    <li><a href="https://www.facebook.com/shiying.tam.3" class="footer-link" target="_blank">Facebook</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h2>Help & Support</h2>
+                <ul class="footer-list">
+                    <li><a href="#" class="footer-link" onclick="openContactModal(event)">Contact Us</a></li>
+                    <li><a href="#" class="footer-link" onclick="openFaqsModal(event)">FAQs</a></li>
+                    <li><a href="#" class="footer-link" onclick="openReturnsModal(event)">Returns</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <p>&copy; 2023 Blossom. All rights reserved.</p>
+            </div>    
+        </div>    
+    </footer>
+
+    <!-- Modal for Contact Us -->
+    <div id="contactModal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('contactModal')">&times;</span>
+            <h2>Contact Us</h2>
+            <p>Tel: 1234 5678</p>
+            <p>Email: Blossom@blossom.com</p>
+            <p>Response times may be longer during weekends and public holidays.</p>
+        </div>
+    </div>
+    
+    <!-- Modal for FAQs -->
+    <div id="faqsModal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('faqsModal')">&times;</span>
+            <h2>FAQs</h2>
+            <p>Question: Is online ordering available?</p>
+            <p1>Online ordering is not available yet, but we hope that it will be available soon! For now you can head down to our outlet to purchase our products.</p1>
+            <p>Question: What is the operating time of your outlet?</p>
+            <p1>Our outlet is opened from 11am to 9pm daily and closed on public holidays.</p1>
+        </div>
+    </div>
+    
+    <!-- Modal for Returns -->
+    <div id="returnsModal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('returnsModal')">&times;</span>
+            <h2>Returns</h2>
+            <p>Returns are only accepted if accompanied by the purchase receipt and the original product packaging. Feel free to reach out to us if you have any questions or concerns.</p>
+        </div>
+    </div>
+
 </body>
+
 </html>
-
-

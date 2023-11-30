@@ -38,3 +38,5 @@ function openFaqsModal(event) {
 function openReturnsModal(event) {
     openModal('returnsModal', event);
 }
+
+

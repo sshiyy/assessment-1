@@ -3,9 +3,6 @@ My idea is to create a website that sells cosmetics and beauty products (similar
 My color pallete consists of mainly pink and pastel colors like beige as it is aesthetically pleasing.
 I have chosen to design my website this way as it is easy for users to navigate around my website.
 
-
-
-
 -------------------------------------- credits --------------------------------------
 
 ---------- cosmetic bag section ----------
@@ -23,6 +20,8 @@ Cosmetic bag main page picture and first 2 pictures: https://bagsmart.com/collec
 ---------- hairaccessories section ----------
 
 ---------- makeuptools section ----------
+Makeup Tools main page picture: 
+1st to 12th picture: https://www.sephora.sg/?ref=logo
 
 ---------- makeup section ----------
 
