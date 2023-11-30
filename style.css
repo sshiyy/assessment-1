@@ -378,13 +378,19 @@ section.testimonial{
     .modal {
         max-width: 80%; /* Adjust the max-width for smaller screens */
     }
+    .flex-item {
+        position: relative;
+        flex: 25%;
+        padding: 10px;
+        margin-bottom: 100px; 
+    }    
     .footer-section h2 {
-        font-size: 19px;
+        font-size: 15px;
         margin-bottom: 10px;
     }
     
     .footer-section p {
-        font-size: 11px;
+        font-size: 6px;
         margin-bottom: 20px;
     }
     
