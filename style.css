@@ -399,6 +399,10 @@ section.testimonial{
         flex: 0 0 calc(50% - 20px);
     }
 
+    .product-price {
+        margin-bottom: 10px;
+    }
+
     .footer-section h2 {
         font-size: 15px;
         margin-bottom: 10px;
