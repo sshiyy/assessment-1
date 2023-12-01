@@ -1,7 +1,17 @@
+Project Name: Blossom
+
+My project is a website for users to look thru different products that the store sells. This can allow users to know what is sold in the store and the price of it. Users can also use it to check if there is sales before heading down to the store to purchase it. This would make it more efficient for users.
+
 ---------------------------------------- idea ----------------------------------------
 My idea is to create a website that sells cosmetics and beauty products (similar to SEPHORA) but with my own color pallete and designs
 My color pallete consists of mainly pink and pastel colors like beige as it is aesthetically pleasing.
 I have chosen to design my website this way as it is easy for users to navigate around my website.
+
+-----------------------------------DESIGN PROCESS---------------------------------------
+This website that I have created is targetted for anybody interested in skincare, beauty enthusiasts and potential customers looking for high quality skincare items. The goal is to provide a user friendly and appealing website for users to browse skincare, makeup etc products
+
+The features in my website includes a navigation function to assist users to navigate to the catergory they are interested in.
+
 
 -------------------------------------- credits --------------------------------------
 
@@ -30,3 +40,5 @@ pictures: https://www.sephora.sg/?ref=logo
 ---------- makeup section ----------
 Makeup pictures: https://www.sephora.sg/categories/makeup
 
+Acknowledgements
+I recieved inspiration for this project from Sephora
