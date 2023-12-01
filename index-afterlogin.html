@@ -17,12 +17,10 @@
 
     <nav>
         <ul class="list">
-            <li><a href="all.html">All</a></li>
-            <li><a href="bestseller.html">Bestsellers</a></li>
-            <li><a href="new.html">Whats new</a></li>
-            <li><a href="sale.html">Sale</a></li>
-            <li><a href="#" onclick="openModal('loginModal', event)">Log In</a></li>
-            <li><a href="#" onclick="openModal('signupModal', event)">Sign Up</a></li>
+            <li><a href="all-afterlogin.html">All</a></li>
+            <li><a href="bestseller-afterlogin.html">Bestsellers</a></li>
+            <li><a href="new-afterlogin.html">Whats new</a></li>
+            <li><a href="sale-afterlogin.html">Sale</a></li>
         </ul>
     </nav>
 
@@ -34,28 +32,28 @@
     <section class="product-category">
         <div class="flex-container">
             <div class="flex-item">
-                <a href="fragrances.html">
+                <a href="fragrances-afterlogin.html">
                     <img src="fragrances.jpg" alt="Fragrances main page image">
                     <div class="overlay"></div>
                     <div class="text-overlay">Fragrances</div>
                 </a>
             </div>
             <div class="flex-item">
-                <a href="hairaccessories.html " >
+                <a href="hairaccessories-afterlogin.html" >
                     <img src="hair tie.jpg" alt="Hair accessories main page image">
                     <div class="overlay"></div>
                     <div class="text-overlay">Hair Accessories</div>
                 </a>
             </div>
             <div class="flex-item">
-                <a href="makeup.html">
+                <a href="makeup-afterlogin.html">
                     <img src="makeup.jpg" alt="Makeup main page image">
                     <div class="overlay"></div>
                     <div class="text-overlay">Makeup</div>
                 </a>
             </div>
             <div class="flex-item">
-                <a href="makeuptools.html">
+                <a href="makeuptools-afterlogin.html">
                     <img src="tools.jpg" alt="Makeup tools main page image">
                     <div class="overlay"></div>
                     <div class="text-overlay">Makeup Tools</div>
@@ -67,28 +65,28 @@
     <section class="product-category">
         <div class="flex-container">
             <div class="flex-item">
-                <a href="cosmeticbag.html" >
+                <a href="cosmeticbag-afterlogin.html" >
                     <img src="bag.jpg"  alt="Cosmetic bag main page image">
                     <div class="overlay"></div>
                     <div class="text-overlay">Cosmetic Bag</div>
                 </a>
             </div>
             <div class="flex-item">
-                <a href="skincare.html">
+                <a href="skincare-afterlogin.html">
                     <img src="skincare.jpg"  alt="Skincare main page image">
                     <div class="overlay"></div>
                     <div class="text-overlay">Skincare</div>
                 </a>
             </div>
             <div class="flex-item">
-                <a href="haircare.html">
+                <a href="haircare-afterlogin.html">
                     <img src="haircare.png"  alt="Haircare main page image">
                     <div class="overlay"></div>
                     <div class="text-overlay">Haircare</div>
                 </a>
             </div>
             <div class="flex-item">
-                <a href="bodycare.html">
+                <a href="bodycare-afterlogin.html">
                     <img src="body.webp"  alt="bodycare main page image">
                     <div class="overlay"></div>
                     <div class="text-overlay">Bodycare</div>
@@ -97,56 +95,13 @@
         </div>
     </section>
 
-    <!-- Login Modal -->
-    <div id="loginModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('loginModal')">&times;</span>
-            <h2>Login</h2>
-            <form id="loginForm">
-                <label for="loginUsername">Username:</label>
-                <input type="text" id="loginUsername" name="loginUsername" required>
-
-                <label for="loginPassword">Password:</label>
-                <input type="password" id="loginPassword" name="loginPassword" required>
-
-                <a href="index-afterlogin.html">
-                    <button type="button">Log In</button>
-                </a>
-    
-            </form>
-        </div>
-    </div>
-
-    <!-- Signup Modal -->
-    <div id="signupModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('signupModal')">&times;</span>
-            <h2>Sign Up</h2>
-            <form id="signupForm">
-                <label for="signupUsername">Username:</label>
-                <input type="text" id="signupUsername" name="signupUsername" required>
-
-                <label for="signupEmail">Email:</label>
-                <input type="email" id="signupEmail" name="signupEmail" required>
-
-                <label for="signupPassword">Password:</label>
-                <input type="password" id="signupPassword" name="signupPassword" required>
-
-                <a href="index-afterlogin.html">
-                    <button type="button">Sign Up</button>
-                </a>
-                <p>Sign Up to get 20% off our products!</p>
-            </form>
-        </div>
-    </div>
-
     <footer>
         <div class="footer-container">
             <div class="footer-section">
                 <h2>About Us</h2>
                 <ul class="footer-list">
-                    <li><a href="about.html" class="footer-link">About Blossom</a></li>
-                    <li><a href="testimonial.html" class="footer-link">Testimonial</a></li>
+                    <li><a href="about-afterlogin.html" class="footer-link">About Blossom</a></li>
+                    <li><a href="testimonial-afterlogin.html" class="footer-link">Testimonial</a></li>
                 </ul>
             </div>
             <div class="footer-section">
@@ -182,27 +137,6 @@
         </div>
     </div>
     
-    <!-- Modal for FAQs -->
-    <div id="faqsModal" class="modal-overlay">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('faqsModal')">&times;</span>
-            <h2>FAQs</h2>
-            <p>Question: Is online ordering available?</p>
-            <p1>Online ordering is not available yet, but we hope that it will be available soon! For now you can head down to our outlet to purchase our products.</p1>
-            <p>Question: What is the operating time of your outlet?</p>
-            <p1>Our outlet is opened from 11am to 9pm daily and closed on public holidays.</p1>
-        </div>
-    </div>
-    
-    <!-- Modal for Returns -->
-    <div id="returnsModal" class="modal-overlay">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('returnsModal')">&times;</span>
-            <h2>Returns</h2>
-            <p>Returns are only accepted if accompanied by the purchase receipt and the original product packaging. Feel free to reach out to us if you have any questions or concerns.</p>
-        </div>
-    </div>
-
 </body>
 
 </html>

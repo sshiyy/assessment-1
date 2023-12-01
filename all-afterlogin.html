@@ -11,19 +11,17 @@
 
 <body>
     <header>
-        <a href="index.html">
+        <a href="index-afterlogin.html">
             <h1>Blossom</h1>
         </a>
     </header>
 
     <nav>
         <ul class="list">
-            <li><a href="all.html">All</a></li>
-            <li><a href="bestseller.html">Bestsellers</a></li>
-            <li><a href="new.html">Whats new</a></li>
-            <li><a href="sale.html">Sale</a></li>
-            <li><a href="#" onclick="openModal('loginModal', event)">Log In</a></li>
-            <li><a href="#" onclick="openModal('signupModal', event)">Sign Up</a></li>
+            <li><a href="all-afterlogin.html">All</a></li>
+            <li><a href="bestseller-afterlogin.html">Bestsellers</a></li>
+            <li><a href="new-afterlogin.html">Whats new</a></li>
+            <li><a href="sale-afterlogin.html">Sale</a></li>
         </ul>
     </nav>
 
@@ -34,13 +32,13 @@
     <section class="product-category">
         <div class="flex-container">
             <div class="flex-item">
-                <img src="makeup section pictures/makeup1.webp">
+                <img src="makeup section pictures/makeup1.webp" alt = "makeup1">
                 <p class="product-brand">RARE BEAUTY</p>
                 <p class="product-name">Soft Pinch Liquid Blush</p>
                 <p class="product-price">$39.00</p>
             </div>
             <div class="flex-item">
-                <img src="makeup section pictures/makeup2.webp">
+                <img src="makeup section pictures/makeup2.webp" alt = "makeup2">
                 <p class="product-brand">RARE BEAUTY</p>
                 <p class="product-name">Soft Pinch Tinted Lip Oil</p>
                 <p class="product-price">$33.00</p>
@@ -781,55 +779,13 @@
         </div>
     </section>
 
-    <!-- Login Modal -->
-    <div id="loginModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('loginModal')">&times;</span>
-            <h2>Login</h2>
-            <form id="loginForm">
-                <label for="loginUsername">Username:</label>
-                <input type="text" id="loginUsername" name="loginUsername" required>
-
-                <label for="loginPassword">Password:</label>
-                <input type="password" id="loginPassword" name="loginPassword" required>
-
-                <a href="all-afterlogin.html">
-                    <button type="button">Log In</button>
-                </a>
-            </form>
-        </div>
-    </div>
-
-    <!-- Signup Modal -->
-    <div id="signupModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('signupModal')">&times;</span>
-            <h2>Sign Up</h2>
-            <form id="signupForm">
-                <label for="signupUsername">Username:</label>
-                <input type="text" id="signupUsername" name="signupUsername" required>
-
-                <label for="signupEmail">Email:</label>
-                <input type="email" id="signupEmail" name="signupEmail" required>
-
-                <label for="signupPassword">Password:</label>
-                <input type="password" id="signupPassword" name="signupPassword" required>
-
-                <a href="all-afterlogin.html">
-                    <button type="button">Sign Up</button>
-                </a>
-                <p>Sign Up to get 20% off our products!</p>
-            </form>
-        </div>
-    </div>
-
     <footer>
         <div class="footer-container">
             <div class="footer-section">
                 <h2>About Us</h2>
                 <ul class="footer-list">
-                    <li><a href="about.html" class="footer-link">About Blossom</a></li>
-                    <li><a href="testimonial.html" class="footer-link">Testimonial</a></li>
+                    <li><a href="about-afterlogin.html" class="footer-link">About Blossom</a></li>
+                    <li><a href="testimonial-afterlogin.html" class="footer-link">Testimonial</a></li>
                 </ul>
             </div>
             <div class="footer-section">

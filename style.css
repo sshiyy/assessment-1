@@ -1,4 +1,4 @@
-body {
+body {  /* set the whole body to the below properties*/
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
@@ -6,7 +6,7 @@ body {
     background-color: #F7F1F0;
 }
 
-header {
+header {  /* sets the header */
     background-color: #F7F1F0;
     color: #262220;
     font-family:"DejaVu Sans Mac Name" ;
@@ -15,126 +15,35 @@ header {
     font-size: 25px;
 }
 
+header a{  /* edit the header */
+    color: #262220; 
+    font-size: 25px;
+    text-decoration: none;
+}
 
+header a:hover {
+    color: #e4b7b7; /* when hovered on the header, will appear pink */
+}
+
+/* navigation ------------------------------------------------ */
 nav{
-    overflow: hidden;
+    overflow: hidden;  /* hide anything that overflow the container */
     background-color: #333;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    position: sticky; /* to let it stay in place even when scrolled down */
+    top: 0;  /* ensures navigation bar sticks on the top of the page */
+    z-index: 100;  /* stacking order to ensure it is above any elements */
     display: flex;
     justify-content: center;
     align-items: center; 
 }
 
-nav a{
+nav a{  /* to edit the texts in the navigation bar */
     display: block;
     color: #ffffff;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
-
-section.color{
-    font-weight: bold;
-}
-
-.modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
-}
-
-.modal-content {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    text-align: center;
-    z-index: 2;
-    top: 65%;
-    transform: translate(-50%, -50%);
-    position: absolute;
-    left: 50%;
-    max-width: 600px; /* Adjust the maximum width as needed */
-    margin: 0 auto;
-}
-
-/* Additional styles for modal overlay */
-.modal-overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
-    z-index: 3; /* Ensure modal overlay appears above other elements */
-}
-
-.modal-content p {
-    font-size: 20px; 
-}
-
-.modal-content p2 {
-    font-size: 20px; 
-}
-
-.modal-content p1{
-    font-size: 18px;
-}
-
-.close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-}
-
-#signupForm,
-#loginForm {
-    display: flex;
-    flex-direction: column;
-}
-
-#signupForm label,
-#loginForm label {
-    margin-top: 10px;
-    color: rgba(0, 0, 0, 0.5);
-}
-
-#signupForm input,
-#loginForm input {
-    padding: 8px;
-    margin-bottom: 15px;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-#signupForm button,
-#loginForm button {
-    background-color: #e4b7b7;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 100%;
-}
-
-#signupForm button:hover,
-#loginForm button:hover {
-    background-color: #e4b7b7;
-}
-
 
 ul.list{
     list-style-type: none;
@@ -154,18 +63,120 @@ li a {
 li a:hover {
     color: #e4b7b7; 
 }
+/* --------------------------------------------------------------------*/
 
-header a{
-    color: #262220; 
+
+
+section.color{  /* to edit the different pages header */
+    font-weight: bold;
+    background-color: #F7F1F0;
+    color: #262220;
+    text-align: center;
     font-size: 25px;
-    text-decoration: none;
-}
-
-header a:hover {
-    color: #e4b7b7; 
+    border-bottom: 1px solid #262220;
+    padding-bottom: 20px;
 }
 
 
+/* modal -------------------------------------------------------------*/
+.modal { 
+    display: none;
+    position: fixed;  /* ensure the modal stays in position and not move even when scrolled */
+    top: 0;  /* modal is positioned to the top */
+    left: 0;  /* modal is positioned to the left */
+    width: 100%;  
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;  /* rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    z-index: 2;  /* ensure it appears over the overlay */
+    top: 65%;  /* positions it slightly above the center */
+    transform: translate(-50%, -50%);
+    position: absolute;
+    left: 50%;
+    max-width: 600px; /* Adjust the maximum width of modal */
+    margin: 0 auto; /* centers it within the container */
+}
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 3; /* Ensure modal overlay appears above other elements */
+}
+
+.modal-content p {  /* edit the paragraph in the class modal-content */
+    font-size: 20px; 
+}
+
+.modal-content p2 {  /* edit the paragraph in the class modal-content */
+    font-size: 20px; 
+}
+
+.modal-content p1{  /* edit the paragraph in the class modal-content */
+    font-size: 18px;
+}
+
+.close {  /* the close button */
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+/* to edit the signup and login form in the modal */
+#signupForm,
+#loginForm {
+    display: flex;
+    flex-direction: column;  /* making it vertical */
+}
+
+#signupForm label,
+#loginForm label {
+    margin-top: 10px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+#signupForm input,
+#loginForm input {
+    padding: 8px;
+    margin-bottom: 15px;  /* to create space between inputs and buttons */
+    width: 100%;
+    box-sizing: border-box;  /* ensures padding and border are included */
+}
+
+#signupForm button,
+#loginForm button {
+    background-color: #000000;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; /* changes cursor to pointer */
+    width: 100%;
+}
+
+#signupForm button:hover,
+#loginForm button:hover {
+    background-color: #e4b7b7;  /* when hovered changes the background to pink*/
+}
+/* ----------------------------------- */
+
+/* position the big image in the main page*/
 section.main-image {
     background: url('background for main page.jpg');
     background-size: cover;
@@ -183,87 +194,7 @@ section.main-image {
     border-bottom: 1px solid #262220;
 }
 
-.product-brand {
-    margin-bottom: 5px;
-    font-size: 15px;
-    font-weight: bold; /* Adjust font weight */
-    font-family: "DejaVu Sans Mac Name";
-}
-
-.product-name {
-    margin-bottom: 5px;
-    font-size: 13px;
-    font-family: "DejaVu Sans Mac Name";
-}
-
-.product-price {
-    font-size: 15px;
-    font-weight: bold; /* Adjust font weight */
-    font-family: "DejaVu Sans Mac Name";
-}
-
-.price-container {
-    display: flex;
-}
-
-.original-price {
-    text-decoration: line-through;
-    color: #999; 
-    font-size: 15px;
-}
-
-.offer-price {
-    color: #FF0000; 
-    font-size: 15px;
-    font-weight: bold;
-}
-
-section p{
-    margin-bottom: 5px;
-    font-size: 25px;
-    font-family:"DejaVu Sans Mac Name" ;
-}
-
-section p2{
-    font-size: 15px;
-}
-
-section.color{
-    background-color: #F7F1F0;
-    color: #262220;
-    text-align: center;
-    font-size: 25px;
-    border-bottom: 1px solid #262220;
-    padding-bottom: 20px;
-}
-
-.flex-container {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    margin: 20px;
-    
-}
-
-.flex-item {
-    position: relative;
-    flex: 25%;
-    padding: 10px;
-    margin-bottom: 69px; 
-}
-
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Adjust the alpha (last value) for darkness */
-    opacity: 0; /* Initially invisible */
-    transition: opacity 0.3s; /* Smooth transition for opacity change */
-}
-
+/* position the smaller image on the main page (navigation)*/
 .flex-item img {
     width: 100%;
     height: 100%; 
@@ -278,11 +209,11 @@ section.color{
     top: 50%; /* Adjust the vertical position */
     left: 50%; /* Adjust the horizontal position */
     transform: translate(-50%, -50%); /* Center the text within the item */
-    color: #e4b7b7; /* Text color */
+    color: #e4b7b7; 
     font-family: 'Times New Roman', Times, serif;
-    font-size: 25px; /* Adjust font size */
-    font-weight: bold; /* Adjust font weight */
-    padding: 10px; /* Adjust the padding as needed */
+    font-size: 25px; 
+    font-weight: bold; 
+    padding: 10px; 
     background-color: #262220; /* Add a semi-transparent background color */
 }
 
@@ -290,6 +221,67 @@ section.color{
     opacity: 1; /* Make the overlay visible on hover */
 }
 
+
+/* product information --------------------------*/
+.product-brand {
+    margin-bottom: 5px;
+    font-size: 15px;
+    font-weight: bold; 
+    font-family: "DejaVu Sans Mac Name";
+}
+
+.product-name {
+    margin-bottom: 5px;
+    font-size: 13px;
+    font-family: "DejaVu Sans Mac Name";
+}
+
+.product-price {
+    font-size: 15px;
+    font-weight: bold; 
+    font-family: "DejaVu Sans Mac Name";
+}
+
+.price-container {
+    display: flex;
+}
+
+.original-price {
+    text-decoration: line-through;  /* strike out the original price */
+    color: #999; 
+    font-size: 15px;
+}
+
+.offer-price {
+    color: #FF0000; 
+    font-size: 15px;
+    font-weight: bold;
+}
+
+
+/* position the image with description -------------------------*/
+.flex-container {
+    position: relative; 
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    
+}
+
+.flex-item {
+    position: relative;
+    flex: 25%;
+    padding: 10px;
+    margin-bottom: 69px; 
+    width: 100%;
+    height: 100%; 
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+    border-radius: 10px;
+
+}
+
+/* footer */
 footer {
     background-color: #333;
     color: #fff;
@@ -335,6 +327,8 @@ footer {
     text-decoration: underline;
 }
 
+
+/* testimonial */
 .testimonial-section {
     text-align: center;
     padding: 50px;
@@ -347,14 +341,6 @@ footer {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.testimonial-card img {
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
-    margin-bottom: 10px;
 }
 
 .customer-name {
@@ -372,44 +358,76 @@ section.testimonial{
     padding-bottom: 20px;
 }
 
+.about-section{
+    text-align: center;
+    padding: 50px;
+}
+
+.about-card {
+    max-width: 800px;
+    margin: 0 auto 30px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-card h2{
+    text-align: center;
+}
+
 
 /* Media Queries for Responsive Design */
 @media only screen and (max-width: 767px) {
-    /* Adjust styles for smaller screens here */
     section.main-image {
         padding: 30px;
     }
+
     .text-overlay {
         font-size: 20px;
     }
+
     li a {
         font-size: 10px;
     }
-    .flex-container{
+
+    .flex-container {
         flex-wrap: wrap;
     }
+
     .flex-item {
-        flex: 0 0 calc(50% - 20px); /* Set width for two columns with margin on smaller screens */
+        flex: 0 0 calc(50% - 20px);
     }
-    .modal {
-        max-width: 80%; /* Adjust the max-width for smaller screens */
-    }
-    .flex-item {
-        position: relative;
-        flex: 25%;
-        padding: 10px;
-        margin-bottom: 130px; 
-    }    
+
     .footer-section h2 {
         font-size: 15px;
         margin-bottom: 10px;
     }
-    
+
     .footer-section p {
         font-size: 9px;
         margin-bottom: 20px;
     }
-    
+
+    /* adjust navigation bar */
+    .list {
+        display: flex;
+        flex-direction: row;
+        background-color: #333;
+    }
+
+    .list li {
+        text-align: center;
+    }
+
+    .list a {
+        padding: 14px 16px;
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+    .list a:hover {
+        background-color: #555; /* Change background color on hover */
+    }
+
 }
-
-
