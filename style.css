@@ -202,6 +202,22 @@ section.main-image {
     font-family: "DejaVu Sans Mac Name";
 }
 
+.price-container {
+    display: flex;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: #999; 
+    font-size: 15px;
+}
+
+.offer-price {
+    color: #FF0000; 
+    font-size: 15px;
+    font-weight: bold;
+}
+
 section p{
     margin-bottom: 5px;
     font-size: 25px;
@@ -233,7 +249,7 @@ section.color{
     position: relative;
     flex: 25%;
     padding: 10px;
-    margin-bottom: 65px; 
+    margin-bottom: 69px; 
 }
 
 
@@ -382,7 +398,7 @@ section.testimonial{
         position: relative;
         flex: 25%;
         padding: 10px;
-        margin-bottom: 100px; 
+        margin-bottom: 130px; 
     }    
     .footer-section h2 {
         font-size: 15px;
@@ -390,7 +406,7 @@ section.testimonial{
     }
     
     .footer-section p {
-        font-size: 6px;
+        font-size: 9px;
         margin-bottom: 20px;
     }
     
